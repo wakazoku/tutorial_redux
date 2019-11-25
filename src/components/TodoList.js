@@ -1,3 +1,4 @@
+import React from "react";
 import Todo from "./Todo";
 import PropTypes from "prop-types";
 
@@ -9,7 +10,7 @@ const TodoList = ({ todos, onTodoClick }) => (
   </ul>
 );
 
-TodoList.prototype = {
+TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
